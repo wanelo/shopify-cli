@@ -107,10 +107,9 @@ module Shopify
       puts "using #{config['domain']}"
       ShopifyAPI::Base.site = site_from_config(config)
 
-      require 'irb'
-      require 'irb/completion'
+      require 'pry'
       ARGV.clear
-      IRB.start
+      Pry.start
     end
 
     private
